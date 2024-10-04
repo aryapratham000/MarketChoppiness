@@ -40,6 +40,17 @@ namespace ChoppyMarket
             this.SeparateWindow = true;
         }
 
+        // Parameterized constructor
+        public ChoppyMarket(int miniEma, int fastEma, int slowEma, int choppinessPeriod)
+            : this()  // Calls the default constructor first
+        {
+            // Assign passed parameter values to the class properties
+            this.MiniEma = miniEma;
+            this.FastEma = fastEma;
+            this.SlowEma = slowEma;
+            this.choppinessPeriod = choppinessPeriod;
+        }
+
         protected override void OnInit()
         {
             // Initialize the EMA indicators
